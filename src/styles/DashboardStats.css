@@ -1,0 +1,92 @@
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dashboard-stat-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e8e8f0;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 14px #1e1e3c08;
+}
+
+.dashboard-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+}
+
+.dashboard-stat-icon.purple {
+  background: #eeeaff;
+  color: #6558d3;
+}
+
+.dashboard-stat-icon.blue {
+  background: #e7f2ff;
+  color: #2875c7;
+}
+
+.dashboard-stat-icon.green {
+  background: #e3f8ed;
+  color: #16835e;
+}
+
+.dashboard-stat-icon.orange {
+  background: #fff1dc;
+  color: #c77716;
+}
+
+.dashboard-stat-card > p {
+  margin: 17px 0 7px;
+  color: #77788b;
+  font-size: 13px;
+}
+
+.dashboard-stat-card h3 {
+  margin: 0;
+  font-size: 29px;
+}
+
+.dashboard-stat-card > span {
+  display: block;
+  margin-top: 9px;
+  color: #9292a2;
+  font-size: 12px;
+}
+
+.dashboard-progress-track {
+  height: 7px;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8e5f4;
+}
+
+.dashboard-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #6558d3;
+  transition: width 0.3s ease;
+}
+
+.dashboard-status {
+  color: #6558d3;
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
